@@ -1,0 +1,78 @@
+{{#if notExist}}
+  <div class="alert alert-danger">Product not exist.</div>
+{{else}}
+<!-- Content -->
+<div class="row">
+  <div class="col-xs-12">
+    <a href="javascript: history.go(-1)" class="btn btn-default btn-xs pull-right margin-bottom10">Go Back</a>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="prod-img">
+    	<div class="img-loader"></div>
+      <span class='hover-zoom'>
+        <img class="img-responsive" src="//cdn.optcentral.com/optportal/catalog/{{companyId}}/large/{{image}}" data-errorsrc="//cdn.optcentral.com/optportal/catalog/{{companyId}}/large/notavailable.jpg">
+        <p>Hover to zoom</p>
+      </span>
+
+      <span class="glyphicon glyphicon-zoom-in" data-toggle="modal" data-target=".zoom-img-modal"></span>
+      <!-- Image Zoom Modal -->
+      <div class="modal fade zoom-img-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div class="modal-body">
+              <img class="zoom-img img-responsive" src="//cdn.optcentral.com/optportal/catalog/{{companyId}}/large/{{image}}">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  			
+    <!-- Image Options Slider-->
+    {{view 'catalog/image-options' model=_model}}
+  </div>
+  <div class="visible-xs margin-bottom20"></div>
+  <div class="col-sm-6">
+    <ul class="list-inline">
+  		<li><strong>Item #: {{style_hash}}</strong></li>
+  		<li><strong>Price: {{price}}</strong></li>
+		</ul>
+    <div class="detail-tabs">
+    	<!-- Nav tabs -->
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#description" data-toggle="tab">Description</a></li>
+			</ul>
+      <!-- Tab panes -->
+			<div class="tab-content">
+				<div class="tab-pane fade in active" id="description">
+					<ul class="list-unstyled">
+						{{#each detailsList}}
+							<li>
+                {{#if displayInfo}}
+                  <span class="glyphicon glyphicon-info-sign display-info" title="{{displayInfo}}"></span>
+                {{/if}}
+                <strong>{{name}}:</strong> {{value}}
+              </li>
+						{{/each}}
+					</ul>
+				</div>
+			</div>
+    </div>
+
+    <!-- Social Sharing -->
+    {{view 'common/social_sharing' model=_model image_selector='.prod-img'}}
+
+    <!-- Ecomm Button -->
+    {{view 'catalog/webstore' model_name="Webstore" param_name="product" param_value=id lazy="true"}}
+
+    <!-- Product Grouping -->
+    {{#if groupings}}
+      {{view 'catalog/product-grouping' model=_model}}
+    {{/if}}
+    
+    <!-- Related Tabs-->
+    {{view 'catalog/related-tabs' model=_model}}
+  </div>
+</div>
+{{/if}}

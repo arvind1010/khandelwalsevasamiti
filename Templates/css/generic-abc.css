@@ -1,0 +1,184 @@
+/*
+ *	Basic Classes
+ */
+.img-responsive {
+  width: 100% !important;
+}
+.margin-bottom10 {
+  margin-bottom: 10px !important;
+}
+.margin-bottom20 {
+  margin-bottom: 20px !important;
+}
+.margin-top10 {
+  margin-top: 10px !important;
+}
+.margin-top20 {
+  margin-top: 20px !important;
+}
+/*
+ *	Top Navigation
+ */
+.top-navigation {
+  background: #2b2c27;
+  border-bottom: none;
+}
+.top-navigation .navbar-brand {
+  height: 56px;
+  padding: 2px 10px;
+}
+.top-navigation .navbar-brand > img {
+  height: 50px;
+}
+.top-navigation #topnavbar-collapse > ul {
+  margin-top: 3px;
+}
+@media (min-width: 600px) {
+  .top-navigation #topnavbar-collapse > ul {
+    float: right;
+  }
+}
+.top-navigation #topnavbar-collapse > ul > li > a {
+  color: #d39770;
+}
+/*
+ *	Breadcrumb
+ */
+.breadcrumb {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  background: none;
+  padding-left: 0px;
+}
+body > div.container {
+  padding-top: 66px;
+  padding-bottom: 41px;
+}
+@media (max-width: 599px) {
+  body > div.container {
+    padding-bottom: 57px;
+  }
+}
+a {
+  color: #2b2c27;
+  text-decoration: none;
+  font-size: 14px;
+}
+a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+.btn-default {
+  color: #2b2c27;
+  background: #d39770;
+  border: 1px solid #2b2c27;
+}
+/*
+ *	Pagination
+ */
+.pagination > li.active > a {
+  background: #2b2c27;
+  color: #d39770;
+}
+.pagination > li.active > a:hover {
+  color: #d39770;
+  background: #2b2c27;
+}
+.pagination > li > a {
+  background: #ffffff;
+  color: #2b2c27;
+}
+.pagination > li > a:hover {
+  color: #2b2c27;
+  background: #eeeeee;
+}
+/*
+ *	Footer
+ */
+.footer {
+  text-align: center;
+  font-size: 11px;
+  background: #fff;
+  padding: 3px 0px;
+  border-top: 10px solid #2b2c27;
+}
+.footer a {
+  color: #000;
+}
+/*
+ *	Variables less
+ */
+/*
+ *	Variables
+ */
+/*	Grid Width */
+/*	Theme */
+/*	Navigation */
+/*	Pagination */
+/*	Href Link */
+/*	Button */
+/*
+ *	Mixins
+ */
+/*	Link */
+/*	Media query rule for Mobile */
+/*	Media query rule for Tablet */
+/*	Media query rule for Desktop */
+/*	Media query rule for Large Desktop */
+/*
+ *	Modules
+ */
+#home-carousel .carousel-inner .item {
+  text-align: center;
+}
+#home-carousel .carousel-inner .item img {
+  display: inline-block;
+}
+.catalog .bottom-pagination {
+  border-top: 1px solid #ccc;
+  text-align: center;
+}
+.catalog .bottom-pagination .pagination {
+  margin: 10px 0px;
+}
+.catalog .product-list > div {
+  margin-bottom: 10px;
+}
+.product .prod-img {
+  margin-bottom: 10px;
+}
+.product .detail-tabs {
+  border-bottom: 1px solid #CCC;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.product .detail-tabs .tab-content > div {
+  padding-top: 10px;
+}
+.product #similar-products-carousel,
+.product #img-options-carousel {
+  padding: 0px 20px;
+}
+.product #similar-products-carousel .custom-carousel-control,
+.product #img-options-carousel .custom-carousel-control {
+  position: absolute;
+}
+.product #similar-products-carousel .custom-carousel-control.right,
+.product #img-options-carousel .custom-carousel-control.right {
+  right: 0px;
+  top: 42%;
+}
+.product #similar-products-carousel .custom-carousel-control.left,
+.product #img-options-carousel .custom-carousel-control.left {
+  left: 0px;
+  top: 42%;
+}
+.press #press-carousel .custom-carousel-control {
+  position: absolute;
+}
+.press #press-carousel .custom-carousel-control.right {
+  right: 0px;
+}
+.press #press-carousel .custom-carousel-control.left {
+  left: 0px;
+}

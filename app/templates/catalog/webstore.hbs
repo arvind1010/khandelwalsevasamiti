@@ -1,0 +1,9 @@
+{{#if finalUrl}}
+	<div class="margin-bottom10">
+		{{#if parentWindow}}
+			<a href="{{finalUrl}}" class="btn btn-primary" rel="nofollow" target="_parent"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a>
+		{{else}}
+			<a href="{{finalUrl}}" class="add_to_bag btn btn-primary" rel="nofollow"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a>
+		{{/if}}
+	</div>
+{{/if}}

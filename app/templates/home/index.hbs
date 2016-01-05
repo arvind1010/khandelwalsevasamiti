@@ -1,0 +1,11 @@
+<div class="carousel fade">
+  <!-- Wrapper for slides -->
+  {{!view 'home/popoverblock'}}
+  <div class="carousel-inner">
+  	{{#each illustrations}}
+	    <div class="item{{#if @first}} active{{/if}}">
+	    	 <img class="img-responsive" src="//cdn.optcentral.com/optportal/illustrations/{{../company.id}}/large/{{fileName}}">
+	    </div>
+    {{/each}}
+  </div>
+</div>

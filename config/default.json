@@ -1,0 +1,26 @@
+{
+	"server": {
+		"port": 3050
+	},
+	"appData": {
+		"user": {
+			"login": "tissotabcwebsite",
+	  	"companyId": 299
+
+	  	//tissotabcwebsite 299
+		},
+		"catalog": {
+			"catalog_type" : "standard",
+      "prodPerPage" : 8,
+      "priceOption" : "retail",
+      "range" : "0-0"
+		},
+		"hostname": "localhost:3050"
+	},
+	"api": {
+		"default": {
+			"host": "qa.optcentral.com",
+    	"protocol": "http"
+		}
+	}
+}

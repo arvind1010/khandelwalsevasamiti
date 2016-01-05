@@ -1,0 +1,33 @@
+<div id="article-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+	<!-- Wrapper for slides -->
+	<div class="carousel-inner">
+		{{#each meta.slides}}
+			<div class="item{{#if @first}} active{{/if}}">
+				{{#each this}}
+					<div class="row">
+						{{#each this}}
+							<div class="col-sm-{{../../../meta.bootstrapColumn}}">
+								{{view ../../../meta.layout.type data=this}}
+							</div>
+						{{/each}}
+					</div>
+				{{/each}}
+			</div>		
+		{{/each}}
+	</div>
+	{{#when meta.slides.length "gt" 1}}
+		<div class="row controller">
+			<div class="container">
+				<hr />
+				<!-- Indicators -->
+				<a class="left" href="#article-carousel" data-slide="prev">previous</a>
+				<ol class="carousel-indicators">
+					{{#each meta.slides}}
+			    	<li data-target="#article-carousel" data-slide-to="{{@index}}" class="{{#if @first}} active{{/if}}"></li>
+			  	{{/each}}
+			  </ol>
+				<a class="right" href="#article-carousel" data-slide="next">next</a>
+			</div>
+		</div>	
+	{{/when}}
+</div>

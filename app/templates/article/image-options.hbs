@@ -1,0 +1,25 @@
+<div id="article-img-options-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+	    				
+	<!-- Wrapper for slides -->
+	<div class="carousel-inner">
+		{{#each imageSlides}}
+			<div class="item{{#if @first}} active{{/if}}">
+				<div class="row">
+					{{#each this}}
+						<div class="col-xs-4"><img class="img-thumbnail img-responsive" src="//cdn.optcentral.com/optportal/illustrations/{{../../company.id}}/regular/{{this}}" data-largesrc="//cdn.optcentral.com/optportal/illustrations/{{../../company.id}}/large/{{this}}" data-regsrc="//cdn.optcentral.com/optportal/illustrations/{{../../company.id}}/regular/{{this}}"></div>
+					{{/each}}
+				</div>
+			</div>		
+		{{/each}}
+	</div>
+
+	<!-- Controls -->
+	{{#when imageSlides.length "gt" 1}}
+		<a class="left custom-carousel-control" href="#article-img-options-carousel" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</a>
+		<a class="right custom-carousel-control" href="#article-img-options-carousel" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+	{{/when}}
+</div>

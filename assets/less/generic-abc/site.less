@@ -1,0 +1,228 @@
+
+/*
+ *	Basic Classes
+ */
+.img-responsive { width: 100% !important; }
+.margin-bottom10 { margin-bottom: 10px !important; }
+.margin-bottom20 { margin-bottom: 20px !important; }
+.margin-top10 { margin-top: 10px !important; }
+.margin-top20 { margin-top: 20px !important; }
+.padding-top10 { padding-top: 10px !important; }
+
+/*
+ *	Top Navigation
+ */
+.top-navigation {
+	background: @color_1;
+	border-bottom: @color_4;
+	.navbar-brand {
+		height: 56px;
+		padding: 2px 10px;
+		> img {
+			height: 50px;
+		}
+	}
+	#topnavbar-collapse {
+		> ul {
+			margin-top: 3px;
+			.no-mobile({
+				//float: right;
+			});
+			> li > a {
+				color: @color_3;
+				&:hover {
+					color: @color_2;
+					opacity: 0.7;
+				}
+			}
+		}
+	}
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+	background: none;
+}
+
+/*
+ *	Breadcrumb
+ */
+.breadcrumb {
+	margin-top: 0px;
+	margin-bottom: 5px;
+	background: none;
+	padding-left: 0px;
+} 
+
+body > div.container {
+	padding-top: 66px;
+	padding-bottom: 41px;
+	.mobile({
+    padding-bottom: 57px;
+  });
+}
+
+a {
+	.href();
+	&:hover {
+		.href-hover();
+	}
+}
+
+/*
+.btn-default {
+	color: #fff;
+	background: @btn-bg;
+	border: @btn-border;
+}
+*/
+
+/*
+ *	Pagination
+ */
+.pagination {
+	> li.active {
+		> a {
+			background: #f5f5f5;
+			color: #999999;
+			border-color: #dddddd;
+			&:hover {
+				color: #101010;
+				background: #f5f5f5;
+			}
+		}
+	}
+	> li {
+		> a {
+			background: #fff;
+			color: #363636;
+			&:hover {
+				//color: @paginationlink-color;
+				background: #f5f5f5;
+			}
+		}
+	}
+} 
+
+/*
+ *	Footer
+ */
+.footer {
+	text-align: center;
+	font-size: 11px;
+	background: #fff;
+	padding: 3px 0px;
+	border-top: 10px solid @color_1;
+	a {
+		color: #000;
+		font-size: 11px;
+	}
+}
+
+/*
+ *	Carousel Fade Effect
+ */
+.carousel.fade {
+  opacity: 1;
+	.item {
+    -moz-transition: opacity ease-in-out .7s;
+    -o-transition: opacity ease-in-out .7s;
+    -webkit-transition: opacity ease-in-out .7s;
+    transition: opacity ease-in-out .7s;
+    left: 0 !important;
+    opacity: 0;
+    top:0;
+    position:absolute;
+    width: 100%;
+    display:block !important;
+    z-index:1;
+    &:first-child { 
+      top: auto;
+      position:relative;
+    }
+    &.active {
+     	opacity: 1;
+      -moz-transition: opacity ease-in-out .7s;
+      -o-transition: opacity ease-in-out .7s;
+      -webkit-transition: opacity ease-in-out .7s;
+      transition: opacity ease-in-out .7s;
+      z-index:2;
+    }
+  }
+}
+
+/*
+ *	Loader
+ */
+.loading-indicator {
+	display: none;
+	background: rgba(255, 255, 255, 0.9) url("/images/image_loader.gif") center center no-repeat;
+	border-radius: 5px;
+	border: 1px solid #CCC;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	width: 100px;
+	height: 100px;
+	margin: -50px 0 0 -50px;
+	z-index: 999999;
+}
+body.loading .loading-indicator {
+	display: block;
+}
+
+/*
+ *	Social sharing
+ */
+.social-sharing-view {
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      display: inline-block;
+    }
+
+    a {
+      background-image: url('/images/icons/social-sprite.png');
+      display: block;
+      height: 34px;
+      text-indent: -9999px;
+      width: 34px;
+    }
+
+    .share-facebook {}
+
+    .share-twitter {
+      background-position: -41px 0px
+    }
+
+    .share-pinterest {
+      background-position: -82px 0px 
+    }
+
+  }
+
+}
+
+/*
+ *	Variables less
+ */
+@import "variables.less";
+
+
+/*
+ *	Modules
+ */
+@import "home.less";
+@import "catalog.less";
+@import "product.less";
+@import "article.less";
+
+
+.dropdown-submenu{position:relative;}
+.dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:-6px;margin-left:-1px;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
+.dropdown-submenu:hover>.dropdown-menu{display:block;}
+.dropdown-submenu>a:after{display:block;content:" ";float:right;width:0;height:0;border-color:transparent;border-style:solid;border-width:5px 0 5px 5px;border-left-color:#cccccc;margin-top:5px;margin-right:-10px;}
+.dropdown-submenu:hover>a:after{border-left-color:#ffffff;}
+.dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}

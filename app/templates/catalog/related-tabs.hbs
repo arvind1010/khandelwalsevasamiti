@@ -1,0 +1,47 @@
+<!-- Nav tabs -->
+{{#when hasVariations "or" relatedProdTabs.length}}
+	<ul class="nav nav-tabs">
+		{{#if hasVariations}}
+			<li class="active"><a href="#variations-tab" data-toggle="tab"><strong>Variations</strong></a></li>
+		{{/if}}
+		{{#each relatedProdTabs}}
+			<li class="{{#unless ../hasVariations}}{{#if @first}}active{{/if}}{{/unless}}"><a href="#related-{{@index}}" data-toggle="tab"><strong>{{title}}</strong></a></li>
+		{{/each}}
+	</ul>
+
+	<!-- Tab panes -->
+	<div class="tab-content padding-top10">
+		{{#if hasVariations}}
+			<div class="tab-pane active" id="variations-tab">
+				{{view 'catalog/variations' collection_name="Variations" param_name="product_id" param_value=variationId lazy="true"}}
+			</div>
+		{{/if}}
+		{{#each relatedProdTabs}}
+			<div class="tab-pane {{#unless ../hasVariations}}{{#if @first}} active{{/if}}{{/unless}}" id="related-{{@index}}">
+				<div id="related-prods-carousel-{{@index}}" class="related-prods-carousel carousel slide" data-ride="carousel" data-interval="false">
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner">
+						{{#each slides}}
+							<div class="item{{#if @first}} active{{/if}}">
+								<div class="row">
+									{{#each this}}
+										<div class="col-xs-4"><a href="/product/{{id}}"><img class="img-thumbnail img-responsive" src="//cdn.optcentral.com/optportal/catalog/{{companyId}}/regular/{{image}}"></a></div>
+									{{/each}}
+								</div>
+							</div>		
+						{{/each}}
+					</div>
+					{{#when slides.length "gt" 1}}
+						<!-- Controls -->
+						<a class="left custom-carousel-control" href="#related-prods-carousel-{{@index}}" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+						</a>
+						<a class="right custom-carousel-control" href="#related-prods-carousel-{{@index}}" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					{{/when}}
+				</div>
+			</div>
+		{{/each}}
+	</div>
+{{/when}}	

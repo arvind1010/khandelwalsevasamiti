@@ -1,0 +1,39 @@
+<div class="catalog">
+	<div class="row">
+		<div class="col-sm-6">
+			<!-- Breadcrumb -->
+		  <ol class="breadcrumb">
+		  	{{#when this.meta.breadCrumbData.type 'eq' 'Collection'}}
+		  		{{#each ../this.meta.breadCrumbData.data}}
+			  		<li {{#if @last}}class="active"{{/if}}>{{#if @last}}{{name}}{{else}}<a href="/catalog/1?coll_subcat={{id}}_0">{{name}}</a>{{/if}}</li>
+			  	{{/each}}
+		  	{{/when}}
+		  	{{#when this.meta.breadCrumbData.type 'eq' 'Category'}}
+		  		{{#each ../this.meta.breadCrumbData.data}}
+			  		<li {{#if @last}}class="active"{{/if}}>{{#if @last}}{{name}}{{else}}<a href="/catalog/1?category={{id}}">{{name}}</a>{{/if}}</li>
+			  	{{/each}}
+		  	{{/when}}
+			</ol>
+		</div>
+		<div class="col-sm-6 top-pagination">
+			<!-- Pagination -->
+			{{view 'catalog/pagination' collection=_collection}}
+		</div>
+	</div>
+  
+	<!-- Product List -->
+	<div class="row product-list">
+		{{#each models}}
+	  	<div class="col-xs-6 col-sm-3">
+	    	<a href="/product/{{id}}">
+	      	<img class="img-thumbnail img-responsive" src="//cdn.optcentral.com/optportal/catalog/{{company_id}}/regular/{{image}}" data-errorsrc="//cdn.optcentral.com/optportal/catalog/{{company_id}}/regular/notavailable.jpg" alt="">
+	    	</a>
+	  	</div>
+  	{{/each}}
+  </div>
+
+  <div class="bottom-pagination">
+  	<!-- Pagination -->
+		{{view 'catalog/pagination' collection=_collection}}
+  </div>
+</div>

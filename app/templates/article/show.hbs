@@ -1,0 +1,35 @@
+<!-- Content -->
+<div class="row">
+  <div class="col-xs-12">
+    <a href="javascript: history.go(-1)" class="btn btn-default btn-xs pull-right margin-bottom10">Go Back</a>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="article-img">
+    	<div class="img-loader"></div>
+    	<img class="img-responsive" src="//cdn.optcentral.com/optportal/illustrations/{{company.id}}/regular/{{image}}">
+      <span class="glyphicon glyphicon-zoom-in" data-toggle="modal" data-target=".zoom-img-modal"></span>
+      <!-- Image Zoom Modal -->
+      <div class="modal fade zoom-img-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div class="modal-body">
+              <img class="zoom-img img-responsive" src="//cdn.optcentral.com/optportal/illustrations/{{company.id}}/large/{{image}}">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  			
+    <!-- Image Options Slider-->
+    {{view 'article/image-options' model=_model}}
+  </div>
+  <div class="visible-xs margin-bottom20"></div>
+  <div class="col-sm-6">
+    <h3>{{title}}</h3>
+    {{{body}}}
+    <!-- Related Tabs-->
+    {{view 'article/related-tabs' model=_model}}
+  </div>
+</div>

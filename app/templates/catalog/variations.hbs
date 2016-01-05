@@ -1,0 +1,28 @@
+<div id="variations-prods-carousel" class="related-prods-carousel carousel slide" data-ride="carousel" data-interval="false">
+	<!-- Wrapper for slides -->
+	<div class="carousel-inner">
+		{{#each meta.slides}}
+			<div class="item{{#if @first}} active{{/if}}">
+				<div class="row">
+					{{#each this}}
+						<div class="col-xs-4">
+							<a href="/product/{{id}}" class="thumbnail">
+								{{style_hash}}<br>
+								{{price}}
+							</a>
+						</div>
+					{{/each}}
+				</div>
+			</div>		
+		{{/each}}
+	</div>
+	{{#when meta.slides.length "gt" 1}}
+		<!-- Controls -->
+			<a class="left custom-carousel-control" href="#variations-prods-carousel" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a class="right custom-carousel-control" href="#variations-prods-carousel" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+	{{/when}}
+</div>

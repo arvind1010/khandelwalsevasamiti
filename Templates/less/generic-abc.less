@@ -1,0 +1,119 @@
+/*
+ *	Basic Classes
+ */
+.img-responsive { width: 100% !important; }
+.margin-bottom10 { margin-bottom: 10px !important; }
+.margin-bottom20 { margin-bottom: 20px !important; }
+.margin-top10 { margin-top: 10px !important; }
+.margin-top20 { margin-top: 20px !important; }
+
+/*
+ *	Top Navigation
+ */
+.top-navigation {
+	background: @topnavigation-bg;
+	border-bottom: @topnavigation-border;
+	.navbar-brand {
+		height: 56px;
+		padding: 2px 10px;
+		> img {
+			height: 50px;
+		}
+	}
+	#topnavbar-collapse {
+		> ul {
+			margin-top: 3px;
+			.no-mobile({
+				float: right;
+			});
+			> li > a {
+				color: @topnavigation-linkcolor;
+			}
+		}
+	}
+}
+
+/*
+ *	Breadcrumb
+ */
+.breadcrumb {
+	margin-top: 0px;
+	margin-bottom: 5px;
+	background: none;
+	padding-left: 0px;
+} 
+
+body > div.container {
+	padding-top: 66px;
+	padding-bottom: 41px;
+	.mobile({
+    padding-bottom: 57px;
+  });
+}
+
+a {
+	.href();
+	&:hover {
+		.href-hover();
+	}
+}
+
+.btn-default {
+	color: @btn-text-color;
+	background: @btn-bg;
+	border: @btn-border;
+}
+
+/*
+ *	Pagination
+ */
+.pagination {
+	> li.active {
+		> a {
+			background: @paginationlink-active-bg;
+			color: @paginationlink-active-color;
+			&:hover {
+				color: @paginationlink-active-color;
+				background: @paginationlink-active-bg;
+			}
+		}
+	}
+	> li {
+		> a {
+			background: @paginationlink-bg;
+			color: @paginationlink-color;
+			&:hover {
+				color: @paginationlink-color;
+				background: @paginationlink-hover-bg;
+			}
+		}
+	}
+} 
+
+/*
+ *	Footer
+ */
+.footer {
+	text-align: center;
+	font-size: 11px;
+	background: #fff;
+	padding: 3px 0px;
+	border-top: 10px solid @topnavigation-bg;
+	a {
+		color: #000;
+	}
+}
+
+/*
+ *	Variables less
+ */
+@import "variables.less";
+
+
+/*
+ *	Modules
+ */
+@import "home.less";
+@import "catalog.less";
+@import "product.less";
+@import "press.less";

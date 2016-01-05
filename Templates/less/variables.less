@@ -1,0 +1,76 @@
+/*
+ *	Variables
+ */
+/*	Grid Width */
+@mobile-max-width: 599px;
+@tablet-min-width: 600px;
+@tablet-max-width: 799px;
+@desktop-min-width: 800px;
+@desktop-max-width: 1199px;
+@large-desktop-max-width: 1200px;
+
+/*	Theme */
+@main-color: #2b2c27;
+@secondary-main-color: #d39770;
+
+/*	Navigation */
+@topnavigation-bg: @main-color;
+@topnavigation-linkcolor: @secondary-main-color;
+@topnavigation-border: none;
+
+/*	Pagination */
+@paginationlink-bg: #ffffff;
+@paginationlink-active-bg: @main-color;
+@paginationlink-color: @main-color;
+@paginationlink-active-color: @secondary-main-color;
+@paginationlink-hover-bg: #eeeeee;
+
+/*	Href Link */
+@href-color: @main-color;
+@href-hover-color: #000; 
+
+/*	Button */
+@btn-bg: @secondary-main-color;
+@btn-text-color: @main-color;
+@btn-border: 1px solid @main-color;
+@btn-bg-hover: #333333;
+@btn-text-color-hover: #ebebeb;
+@btn-border-hover: 1px solid @main-color;
+
+/*
+ *	Mixins
+ */
+
+/*	Link */
+.href() {
+	color: @href-color;
+	text-decoration: none;
+	font-size: 14px;
+}
+.href-hover() {
+	color: @href-hover-color;
+	text-decoration: underline;
+}
+
+/*	Media query rule for Mobile */
+.mobile(@rules) {
+  @media (max-width: @mobile-max-width) { @rules(); }
+}
+.no-mobile(@rules) {
+  @media (min-width: @tablet-min-width) { @rules(); }
+}
+
+/*	Media query rule for Tablet */
+.tablet(@rules) {
+  @media (min-width: @tablet-min-width) and (max-width: @tablet-max-width) { @rules(); }
+}
+
+/*	Media query rule for Desktop */
+.desktop(@rules) {
+  @media (min-width: @desktop-min-width) and (max-width: @desktop-max-width) { @rules(); }
+}
+
+/*	Media query rule for Large Desktop */
+.large-desktop(@rules) {
+  @media (min-width: @large-desktop-max-width) { @rules(); }
+}

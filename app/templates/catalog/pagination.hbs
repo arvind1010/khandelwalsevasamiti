@@ -1,0 +1,15 @@
+
+<div class="row">
+	<div class="col-sm-4">
+		<p>Showing <strong>{{meta.startProduct}}</strong> - <strong>{{meta.endProduct}}</strong> of <strong>{{meta.totalProducts}}</strong></p>
+	</div>
+	<div class="col-sm-8 clearfix">
+		<ul class="pagination pagination-sm">
+			{{#each meta.pages}}
+				<li class="{{#if this.active}}active{{/if}}">
+					<a href="{{this.num}}{{../meta.currQueryString}}">{{#if this.text}}{{{this.text}}}{{else}}{{this.num}}{{/if}}</a>
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,39 @@
+<!-- Nav tabs -->
+{{#if relatedProdTabs.length}}
+	<ul class="nav nav-tabs">
+		{{#each relatedProdTabs}}
+			<li class="{{#if @first}}active{{/if}}"><a href="#related-{{@index}}" data-toggle="tab"><strong>{{title}}</strong></a></li>
+		{{/each}}
+	</ul>
+
+	<!-- Tab panes -->
+	<div class="tab-content padding-top10">
+		{{#each relatedProdTabs}}
+			<div class="tab-pane {{#if @first}} active{{/if}}" id="related-{{@index}}">
+				<div id="related-prods-carousel-{{@index}}" class="related-prods-carousel carousel slide" data-ride="carousel" data-interval="false">
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner">
+						{{#each slides}}
+							<div class="item{{#if @first}} active{{/if}}">
+								<div class="row">
+									{{#each this}}
+										<div class="col-xs-4"><a href="/product/{{id}}"><img class="img-thumbnail img-responsive" src="//cdn.optcentral.com/optportal/catalog/{{../../../company.id}}/regular/{{image}}"></a></div>
+									{{/each}}
+								</div>
+							</div>		
+						{{/each}}
+					</div>
+					{{#when slides.length "gt" 1}}
+						<!-- Controls -->
+						<a class="left custom-carousel-control" href="#related-prods-carousel-{{@index}}" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+						</a>
+						<a class="right custom-carousel-control" href="#related-prods-carousel-{{@index}}" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					{{/when}}
+				</div>
+			</div>
+		{{/each}}
+	</div>
+{{/if}}	

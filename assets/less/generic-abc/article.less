@@ -1,0 +1,83 @@
+#article-carousel {
+	.carousel-inner {
+		margin-bottom: 20px;
+	}
+	.carousel-indicators {
+		display: inline-block;
+		position: static;
+		margin-left: 0px;
+		li {
+			background: @main-color;
+			width: 10px;
+			height: 10px;
+			display: inline-block;
+			margin: 0px;
+		}
+		li.active {
+			background: @secondary-main-color;
+			margin: 0px;
+		}
+	}
+	.controller {
+		text-align: center;
+		.no-mobile({
+			position: fixed;
+			bottom: 40px;
+		});
+	} 
+}
+.article_view {
+	.article-img {
+		position: relative;
+		min-height: 200px;
+		.img-loader {
+			position: absolute; 
+			left: 0px; 
+			right: 0px; 
+			top: 0px; 
+			bottom: 0px; 
+			background: url('/images/image_loader.gif') center center no-repeat #E9E9E9; 
+			opacity: 0.8;
+			border-radius: 10px;
+			min-height: 200px;
+		}
+		> img {
+			margin-bottom: 10px;
+		}
+		.glyphicon-zoom-in {
+			position: absolute;
+			bottom: 10px;
+			top: auto;
+			left: 10px;
+			cursor: pointer;
+		}
+	}
+	.zoom-img-modal {
+		.close {
+			position: absolute;
+			right: 5px;
+			top: 0px;
+			z-index: 1000;
+		}
+	}
+	.related-prods-carousel, #article-img-options-carousel {
+		padding: 0px 20px;
+		img {
+			cursor: pointer;
+		}
+		.custom-carousel-control {
+			position: absolute;
+		}
+		.custom-carousel-control.right {
+			right: 0px;
+			top: 42%;
+		}
+		.custom-carousel-control.left {
+			left: 0px;
+			top: 42%;
+		}
+	}
+	.article_related_tabs_view {
+		margin-top: 20px;
+	}
+}

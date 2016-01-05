@@ -1,0 +1,15 @@
+<li><a href="/catalog/1?coll_subcat={{meta.collectionId}}_0">View All</a></li>
+{{#each models}}
+	{{#if children.length}}
+		<li class="dropdown-submenu">
+      <a href="/catalog/1?coll_subcat={../../meta.collectionId}}_0">{{name}}</a>
+      <ul class="dropdown-menu">
+        {{#each children}}
+          <li><a href="/catalog/1?coll_subcat={{../../../meta.collectionId}}_{{id}}">{{name}}</a></li>
+        {{/each}}
+      </ul>
+    </li>
+  {{else}}  
+    <li><a href="/catalog/1?coll_subcat={{../../meta.collectionId}}_{{id}}">{{name}}</a></li>
+	{{/if}}
+{{/each}}

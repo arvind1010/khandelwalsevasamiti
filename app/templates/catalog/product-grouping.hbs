@@ -1,0 +1,14 @@
+<form class="product-config">
+  {{#each groupings}}
+    <label class="control-label" for="{{sanitize name}}">{{name}}</label>
+    <div class="controls">
+      <select class="grouping selectpicker form-control" data-param="{{type_value}}" id="{{sanitize name}}">
+        <option value="0" selected>Select one</option>
+        {{#each values}}
+          <option value="{{value}}">{{value}}</option>
+        {{/each}}
+      </select>
+    </div>
+  {{/each}}
+</form>
+<hr />

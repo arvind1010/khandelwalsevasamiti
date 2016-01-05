@@ -1,0 +1,18 @@
+<div class="row">
+	<div class="col-sm-6">
+		<div class="imageslide-carousel carousel fade">
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner">
+		  	{{#each data.illustrations}}
+		  		<div class="item{{#if @first}} active{{/if}}">
+		  			<img class="img-responsive" src="//cdn.optcentral.com/optportal/illustrations/{{../data.company.id}}/regular/{{fileName}}">
+		  		</div>
+		  	{{/each}}
+		 	</div>
+		</div>
+	</div>
+	<div class="col-sm-6">
+		<h1>{{data.title}}</h1>
+		{{{data.body}}}
+	</div>
+</div>
