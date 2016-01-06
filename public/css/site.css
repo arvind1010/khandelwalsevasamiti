@@ -49,6 +49,14 @@ span.lower-case {
 /*
  * Fonts
  */
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  margin-top: 10px;
+}
 @font-face {
   font-family: UniversLightCondensed;
   src: url('../fonts/univers-light-condensed.ttf');
@@ -60,7 +68,7 @@ span.lower-case {
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
-  background: url(../images/bg4.jpg);
+  background: url(../images/bg5.jpg);
 }
 body p {
   font-size: 12px;
@@ -68,8 +76,8 @@ body p {
   color: #000;
 }
 body > .container {
-  padding-top: 117px !important;
-  padding-bottom: 22px;
+  padding-top: 75px !important;
+  padding-bottom: 30px;
 }
 @media (max-width: 599px) {
   body > .container {
