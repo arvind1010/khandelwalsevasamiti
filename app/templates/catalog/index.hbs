@@ -1,39 +1,29 @@
-<div class="catalog">
-	<div class="row">
-		<div class="col-sm-6">
-			<!-- Breadcrumb -->
-		  <ol class="breadcrumb">
-		  	{{#when this.meta.breadCrumbData.type 'eq' 'Collection'}}
-		  		{{#each ../this.meta.breadCrumbData.data}}
-			  		<li {{#if @last}}class="active"{{/if}}>{{#if @last}}{{name}}{{else}}<a href="/catalog/1?coll_subcat={{id}}_0">{{name}}</a>{{/if}}</li>
-			  	{{/each}}
-		  	{{/when}}
-		  	{{#when this.meta.breadCrumbData.type 'eq' 'Category'}}
-		  		{{#each ../this.meta.breadCrumbData.data}}
-			  		<li {{#if @last}}class="active"{{/if}}>{{#if @last}}{{name}}{{else}}<a href="/catalog/1?category={{id}}">{{name}}</a>{{/if}}</li>
-			  	{{/each}}
-		  	{{/when}}
-			</ol>
-		</div>
-		<div class="col-sm-6 top-pagination">
-			<!-- Pagination -->
-			{{view 'catalog/pagination' collection=_collection}}
-		</div>
-	</div>
-  
-	<!-- Product List -->
-	<div class="row product-list">
-		{{#each models}}
-	  	<div class="col-xs-6 col-sm-3">
-	    	<a href="/product/{{id}}">
-	      	<img class="img-thumbnail img-responsive" src="//cdn.optcentral.com/optportal/catalog/{{company_id}}/regular/{{image}}" data-errorsrc="//cdn.optcentral.com/optportal/catalog/{{company_id}}/regular/notavailable.jpg" alt="">
-	    	</a>
-	  	</div>
-  	{{/each}}
-  </div>
+<div class="well">
+	<div class="txt text-center"><h3>कार्यालय</h3></div>
 
-  <div class="bottom-pagination">
-  	<!-- Pagination -->
-		{{view 'catalog/pagination' collection=_collection}}
-  </div>
+	<hr>
+
+	<div class="txt text-center"><p><span style="font-size:16px;">खंडेलवाल सेवा समिती,</span><br></p><p><span style="font-size:16px;">C/o,&nbsp;खंडेलवाल ट्रेडिंग कंपनी, सदर बाज़ार,</span><br></p><p><span style="font-size:16px;">परतवाड़ा, जि. अमरावती (महाराष्ट्र)<br>फोन नं. 07223-220413, 222413<span class="editor_accent2"></span></span><span class="editor_accent2"></span></p><p><span style="font-size:16px;">Email: khandelwalsevasamiti@gmail.com</span><br></p></div>
+	
+</div>
+
+<div class="well">
+	<div class="txt text-center"><h3>फॉर्म भेजने का पता&nbsp;</h3></div>
+
+	<HR>
+
+	<div class="txt text-center"><p><span style="font-size:16px;">कुलदीप संपतकुमारजी तंबोलिया,<br></span></p><p><span style="font-size:16px;"> वकिल लाईन, परतवाड़ा 444805 <br></span></p><p><span style="font-size:16px;">जि. अमरावती (महा.)&nbsp;</span></p><p><span style="font-size:16px;">फोन नं. 07223-220445, 9028233699, 8149820445</span><br></p></div>
+
+
+	
+</div>
+
+<div class="well">
+	<div class="txt text-center"><h3>आवास व्यवस्था हेतू संपर्क&nbsp;&nbsp;</h3></div>
+
+	<hr>
+
+
+	<div class="txt text-center"><p><span style="font-size:16px;">प्रदिप सिरोया &nbsp;- 9423126633<br><br>अनिल साकोनिया -&nbsp;9423623274<br><br>संदीप कुलवाल - 9890085100<br><br>अमित कुलवाल &nbsp;- 9420076223<br><br>अमित डंगायच &nbsp;- 9423125741<br><br>रोशन सिरोया &nbsp;- 9422941028<br><br>राजेश बुसर &nbsp;- 9890760076<br><br>कृष्णा बड़ाया, चिखलदरा – 9423648890</span><span style="font-size:16px;"></span></p></div>
+	
 </div>

@@ -7,7 +7,7 @@ module.exports = BaseAppView.extend({
     });
 
     this.app.on('change:title', function(app, title) {
-      document.title = title + ' | Generic ABC Module';
+      document.title = title + '';
     });
   }
 });

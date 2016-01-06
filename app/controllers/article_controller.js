@@ -1,6 +1,6 @@
 module.exports = {
   index: function(params, callback) {
-    this.app.set('title', 'Article');
+    this.app.set('title', 'About');
     this.app.fetch(null, callback);
   },
   show: function(params, callback) {
