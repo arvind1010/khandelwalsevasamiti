@@ -1023,34 +1023,10 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 templates["home/index"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, self=this, functionType="function", escapeExpression=this.escapeExpression;
+  
 
-function program1(depth0,data,depth1) {
-  
-  var buffer = "", stack1, helper;
-  buffer += "\r\n	    <div class=\"item";
-  stack1 = helpers['if'].call(depth0, (data == null || data === false ? data : data.first), {hash:{},inverse:self.noop,fn:self.program(2, program2, data),data:data});
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\">\r\n	    	 <img class=\"img-responsive\" src=\"//cdn.optcentral.com/optportal/illustrations/"
-    + escapeExpression(((stack1 = ((stack1 = (depth1 && depth1.company)),stack1 == null || stack1 === false ? stack1 : stack1.id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "/large/";
-  if (helper = helpers.fileName) { stack1 = helper.call(depth0, {hash:{},data:data}); }
-  else { helper = (depth0 && depth0.fileName); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
-  buffer += escapeExpression(stack1)
-    + "\">\r\n	    </div>\r\n    ";
-  return buffer;
-  }
-function program2(depth0,data) {
-  
-  
-  return " active";
-  }
 
-  buffer += "<div class=\"carousel fade\">\r\n  <!-- Wrapper for slides -->\r\n  \r\n  <div class=\"carousel-inner\">\r\n  	";
-  stack1 = helpers.each.call(depth0, (depth0 && depth0.illustrations), {hash:{},inverse:self.noop,fn:self.programWithDepth(1, program1, data, depth0),data:data});
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\r\n  </div>\r\n</div>";
-  return buffer;
+  return "\r\n<div class=\"row\">\r\n  <div class=\"col-sm-12\">\r\n    <h1 style=\"text-align: center;\">खंडेलवाल सेवा समिती, परतवाड़ा-अचलपूर</h1>\r\n<h3 style=\"text-align: center;\">व्दितीय अखिल भारतीय खंडेलवाल युवक-युवती परिचय सम्मेलन एवं सामुहिक विवाह</h3>\r\n<h3 style=\"text-align: center;\">दिनांक 11, 12 एवं 13 फरवरी  2016 </h3>\r\n<h5 style=\"text-align: center;\">स्थान :- रंगोली लॉंन्स, चिखलदरा रोड, परतवाड़ा</h5>\r\n    \r\n  </div>\r\n  \r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-sm-9\">\r\n\r\n<div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\r\n  <!-- Indicators -->\r\n  <ol class=\"carousel-indicators\">\r\n    <li data-target=\"#carousel-example-generic\" data-slide-to=\"0\" class=\"active\"></li>\r\n    <li data-target=\"#carousel-example-generic\" data-slide-to=\"1\"></li>\r\n    <li data-target=\"#carousel-example-generic\" data-slide-to=\"2\"></li>\r\n  </ol>\r\n\r\n  <!-- Wrapper for slides -->\r\n  <div class=\"carousel-inner\" role=\"listbox\">\r\n   <div class=\"item active\">\r\n              <img src=\"/images/img1.jpg\" class=\"img-responsive\" style=\"border: 1px solid #000;\">\r\n            </div>\r\n            <div class=\"item\">\r\n              <img src=\"/images/img2.jpg\" class=\"img-responsive\" style=\"border: 1px solid #000;\">\r\n            </div>\r\n            <div class=\"item\">\r\n              <img src=\"/images/img3.jpg\" class=\"img-responsive\" style=\"border: 1px solid #000;\">\r\n            </div>\r\n            <div class=\"item\">\r\n              <img src=\"/images/img4.jpg\" class=\"img-responsive\" style=\"border: 1px solid #000;\">\r\n            </div> \r\n            <div class=\"item\">\r\n              <img src=\"/images/img5.jpg\" class=\"img-responsive\" style=\"border: 1px solid #000;\">\r\n            </div>\r\n            <div class=\"item\">\r\n              <img src=\"/images/img6.jpg\" class=\"img-responsive\" style=\"border: 1px solid #000;\">\r\n            </div>\r\n            <div class=\"item\">\r\n              <img src=\"/images/img7.jpg\" class=\"img-responsive\" style=\"border: 1px solid #000;\">\r\n            </div>\r\n            <div class=\"item\">\r\n              <img src=\"/images/img8.jpg\" class=\"img-responsive\" style=\"border: 1px solid #000;\">\r\n            </div>\r\n            <div class=\"item\">\r\n              <img src=\"/images/img9.jpg\" class=\"img-responsive\" style=\"border: 1px solid #000;\">\r\n            </div>\r\n            <div class=\"item\">\r\n              <img src=\"/images/img10.jpg\" class=\"img-responsive\" style=\"border: 1px solid #000;\">\r\n            </div>\r\n            <div class=\"item\">\r\n              <img src=\"/images/img11.jpg\" class=\"img-responsive\" style=\"border: 1px solid #000;\">\r\n            </div>\r\n  </div>\r\n\r\n  <!-- Controls -->\r\n  <a class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"prev\">\r\n    <span class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>\r\n    <span class=\"sr-only\">Previous</span>\r\n  </a>\r\n  <a class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"next\">\r\n    <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n    <span class=\"sr-only\">Next</span>\r\n  </a>\r\n</div>\r\n\r\n    \r\n  </div>\r\n  \r\n</div>\r\n";
   });
 
 templates["home/popoverblock"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
