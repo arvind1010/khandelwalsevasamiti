@@ -39,8 +39,8 @@ module.exports = function(grunt) {
           ]
         },
         files: {
-          'public/css/ourstrap.css': 'assets/less/bootstrap-3.1.1/bootstrap.less'
-          //'public/css/site.css': 'assets/less/generic-abc/generic-abc.less'
+          'public/css/ourstrap.css': 'assets/less/bootstrap-3.1.1/bootstrap.less',
+          'public/css/site.css': 'assets/less/generic-abc/site.less'
         }
       }
     },
