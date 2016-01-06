@@ -63,77 +63,10 @@ function program6(depth0,data) {
 templates["article/index"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, helper, options, functionType="function", escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing, self=this;
+  
 
-function program1(depth0,data,depth1) {
-  
-  var buffer = "", stack1;
-  buffer += "\r\n			<div class=\"item";
-  stack1 = helpers['if'].call(depth0, (data == null || data === false ? data : data.first), {hash:{},inverse:self.noop,fn:self.program(2, program2, data),data:data});
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\">\r\n				";
-  stack1 = helpers.each.call(depth0, depth0, {hash:{},inverse:self.noop,fn:self.programWithDepth(4, program4, data, depth1),data:data});
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\r\n			</div>		\r\n		";
-  return buffer;
-  }
-function program2(depth0,data) {
-  
-  
-  return " active";
-  }
 
-function program4(depth0,data,depth2) {
-  
-  var buffer = "", stack1;
-  buffer += "\r\n					<div class=\"row\">\r\n						";
-  stack1 = helpers.each.call(depth0, depth0, {hash:{},inverse:self.noop,fn:self.programWithDepth(5, program5, data, depth2),data:data});
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\r\n					</div>\r\n				";
-  return buffer;
-  }
-function program5(depth0,data,depth3) {
-  
-  var buffer = "", stack1, helper, options;
-  buffer += "\r\n							<div class=\"col-sm-"
-    + escapeExpression(((stack1 = ((stack1 = (depth3 && depth3.meta)),stack1 == null || stack1 === false ? stack1 : stack1.bootstrapColumn)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\">\r\n								"
-    + escapeExpression((helper = helpers.view || (depth0 && depth0.view),options={hash:{
-    'data': (depth0)
-  },data:data},helper ? helper.call(depth0, ((stack1 = ((stack1 = (depth3 && depth3.meta)),stack1 == null || stack1 === false ? stack1 : stack1.layout)),stack1 == null || stack1 === false ? stack1 : stack1.type), options) : helperMissing.call(depth0, "view", ((stack1 = ((stack1 = (depth3 && depth3.meta)),stack1 == null || stack1 === false ? stack1 : stack1.layout)),stack1 == null || stack1 === false ? stack1 : stack1.type), options)))
-    + "\r\n							</div>\r\n						";
-  return buffer;
-  }
-
-function program7(depth0,data) {
-  
-  var buffer = "", stack1;
-  buffer += "\r\n		<div class=\"row controller\">\r\n			<div class=\"container\">\r\n				<hr />\r\n				<!-- Indicators -->\r\n				<a class=\"left\" href=\"#article-carousel\" data-slide=\"prev\">previous</a>\r\n				<ol class=\"carousel-indicators\">\r\n					";
-  stack1 = helpers.each.call(depth0, ((stack1 = (depth0 && depth0.meta)),stack1 == null || stack1 === false ? stack1 : stack1.slides), {hash:{},inverse:self.noop,fn:self.program(8, program8, data),data:data});
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\r\n			  </ol>\r\n				<a class=\"right\" href=\"#article-carousel\" data-slide=\"next\">next</a>\r\n			</div>\r\n		</div>	\r\n	";
-  return buffer;
-  }
-function program8(depth0,data) {
-  
-  var buffer = "", stack1;
-  buffer += "\r\n			    	<li data-target=\"#article-carousel\" data-slide-to=\""
-    + escapeExpression(((stack1 = (data == null || data === false ? data : data.index)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\" class=\"";
-  stack1 = helpers['if'].call(depth0, (data == null || data === false ? data : data.first), {hash:{},inverse:self.noop,fn:self.program(2, program2, data),data:data});
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\"></li>\r\n			  	";
-  return buffer;
-  }
-
-  buffer += "<div id=\"article-carousel\" class=\"carousel slide\" data-ride=\"carousel\" data-interval=\"false\">\r\n	<!-- Wrapper for slides -->\r\n	<div class=\"carousel-inner\">\r\n		";
-  stack1 = helpers.each.call(depth0, ((stack1 = (depth0 && depth0.meta)),stack1 == null || stack1 === false ? stack1 : stack1.slides), {hash:{},inverse:self.noop,fn:self.programWithDepth(1, program1, data, depth0),data:data});
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\r\n	</div>\r\n	";
-  stack1 = (helper = helpers.when || (depth0 && depth0.when),options={hash:{},inverse:self.noop,fn:self.program(7, program7, data),data:data},helper ? helper.call(depth0, ((stack1 = ((stack1 = (depth0 && depth0.meta)),stack1 == null || stack1 === false ? stack1 : stack1.slides)),stack1 == null || stack1 === false ? stack1 : stack1.length), "gt", 1, options) : helperMissing.call(depth0, "when", ((stack1 = ((stack1 = (depth0 && depth0.meta)),stack1 == null || stack1 === false ? stack1 : stack1.slides)),stack1 == null || stack1 === false ? stack1 : stack1.length), "gt", 1, options));
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\r\n</div>";
-  return buffer;
+  return "<div>\r\n	<h1 class=\"text-center\">खंडेलवाल सेवा समिती, परतवाड़ा-अचलपूर</h1>\r\n	<h3 class=\"text-center\"> कार्यकारिणी</h3>\r\n</div>\r\n<hr>\r\n<div class=\"row\">\r\n	<div class=\"col-sm-6 \">\r\n	<div class=\"well\">\r\n		<h2 class=\"text-center\">अध्यक्ष</h2>\r\n		<hr>\r\n		<h4 class=\"text-center\">गोविंद नारायणदासजी सिरोया</h4>\r\n		<h4 class=\"text-center\">9422156180, 9130356180</h4>			\r\n	</div>\r\n		\r\n	</div>\r\n	<div class=\"col-sm-6 \">\r\n		<div class=\"well\">\r\n			<h2 class=\"text-center\">सचिव</h2>\r\n			<hr>\r\n			<h4 class=\"text-center\">राजेंद्र कन्हेय्यालाल पाटोदीया</h4>\r\n			<h4 class=\"text-center\">9421827601, 9764309684</h4>	\r\n			\r\n		</div>\r\n					\r\n	</div>\r\n	\r\n</div>\r\n\r\n<div class=\"row\">\r\n	<div class=\"col-sm-6 \">\r\n	<div class=\"well\">\r\n		<h2 class=\"text-center\">उपाध्यक्ष</h2>\r\n		<hr>\r\n		<h4 class=\"text-center\">मनीष रमेशचंद्रजी डंगायच  - 9422234459</h4>\r\n		<h4 class=\"text-center\">संतोष व्दारकादासजी खुटेटा  - 9422858348</h4>\r\n		<h4 class=\"text-center\">मनीष मोहनलालजी भुखमारीया  - 9420718184</h4>\r\n		<h4 class=\"text-center\">अजय श्रीरामजी सेठी  - 9422156282</h4>	\r\n		<h4 class=\"text-center\">बजरंग दिपचंदजी खुटेटा  - 9890006474</h4>			\r\n	</div>\r\n	\r\n\r\n	</div>\r\n	<div class=\"col-sm-6 \">\r\n		<div class=\"well\">\r\n			<h2 class=\"text-center\">सह सचिव</h2>\r\n			<hr>\r\n			<h4 class=\"text-center\">रितेश चंद्रकांतजी बंब  - 9923450422</h4>\r\n			<h4 class=\"text-center\">मुरारी मदनलालजी ताम्बी - 9422159267</h4>\r\n			<h4 class=\"text-center\">जयकुमार श्यामसुंदरजी घिया - 9527282808</h4>\r\n			<h4 class=\"text-center\">कुलदिप संपतकुमारजी तंबोलिया - 9420833337, 8149820445</h4>\r\n			\r\n		</div>\r\n		\r\n						\r\n	</div>\r\n	\r\n</div>\r\n\r\n<div class=\"row\">\r\n	<div class=\"col-sm-6\">\r\n		<div class=\"row\">\r\n			<div class=\"col-sm-12 \">\r\n				<div class=\"well\">\r\n					<h2 class=\"text-center\">कोषाध्यक्ष</h2>\r\n					<hr>\r\n					<h4 class=\"text-center\">प्रकाशचंद्र भुरमलजी भुखमारीया </h4>\r\n					<h4 class=\"text-center\">9403619592</h4>	\r\n					\r\n				</div>\r\n							\r\n			</div>\r\n			<div class=\"col-sm-12 \">\r\n			<div class=\"well\">\r\n			<h2 class=\"text-center\">सह कोषाध्यक्ष</h2>\r\n					<hr>\r\n					<h4 class=\"text-center\">विजय सत्यनारायणजी भुखमारीया </h4>\r\n					<h4 class=\"text-center\">9422890314</h4>	\r\n\r\n				\r\n			</div>\r\n							\r\n			</div>\r\n			<div class=\"col-sm-12 \">\r\n				<div class=\"well\">\r\n					<h2 class=\"text-center\">स्वागत अध्यक्ष</h2>\r\n					<hr>\r\n					<h4 class=\"text-center\">कैलाश रामबिलासजी रावत</h4>\r\n					<h4 class=\"text-center\">9923108700</h4>	\r\n					\r\n				</div>			\r\n			</div>\r\n			\r\n		</div>\r\n			\r\n	</div>\r\n	<div class=\"col-sm-6 \">\r\n	<div class=\"well\">\r\n	<h2 class=\"text-center\">आवास-निवास व्यवस्था</h2>\r\n		<hr>\r\n		<h4 class=\"text-center\">प्रदिप सिरोया  - 9423126633</h4>\r\n		<h4 class=\"text-center\">अनिल साकोनिया - 9423623274</h4>\r\n\r\n		<h4 class=\"text-center\">संदीप कुलवाल - 9890085100</h4>\r\n		<h4 class=\"text-center\">अमित कुलवाल  - 9420076223</h4>\r\n\r\n		<h4 class=\"text-center\">अमित डंगायच  - 9423125741</h4>\r\n		<h4 class=\"text-center\">रोशन सिरोया  - 9422941028</h4>\r\n\r\n		<h4 class=\"text-center\">राजेश बुसर  - 9890760076</h4>\r\n		<h4 class=\"text-center\">कृष्णा बड़ाया, चिखलदरा – 9423648890</h4>\r\n		\r\n	</div>\r\n		\r\n\r\n\r\n\r\n	</div>\r\n	\r\n</div>\r\n";
   });
 
 templates["article/list-details"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
